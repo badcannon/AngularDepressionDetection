@@ -1,0 +1,37 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="">
+      <img src="https://media.giphy.com/media/lkdIhnHHnFma6xvICt/giphy.gif" width="30" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" [routerLink]="'/home'">
+        <fa-icon [icon]="faHome" class="mr-1"></fa-icon>
+        Home
+      </a>
+      <a class="navbar-item" routerLink="/docs">
+        <fa-icon [icon]="faFileAlt" class="mr-1"></fa-icon>
+        Documentation
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item">
+        <fa-icon [icon]="faUserTie" class="mr-1"></fa-icon>
+         About Us
+      </a>
+      <a class="navbar-item">
+        <fa-icon [icon]="faCodeBranch" class="mr-1"></fa-icon>
+        GitHub
+      </a>
+    </div>
+  </div>
+</nav>

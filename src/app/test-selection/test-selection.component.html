@@ -1,0 +1,26 @@
+<div class="tabs is-centered is-medium is-boxed">
+  <ul>
+    <li  [ngClass]="{'is-active' : selectedTest == 'audio'  ? true : false}">
+      <a (click)="chooseTest('audio')">
+        <span class="icon is-small">  <fa-icon [icon]="faVolumeUp" class="mr-1"></fa-icon></span>
+        <span>Audio Detection</span>
+      </a>
+    </li>
+    <li [ngClass]="{'is-active' : selectedTest == 'twitter'  ? true : false}">
+      <a (click)="chooseTest('twitter')">
+        <span class="icon is-small"> <fa-icon [icon]="faHashtag" class="mr-1"></fa-icon></span>
+        <span>Twitter handle</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="hero">
+  <div class="hero-body is-fullheight">
+    <p class="title">
+      {{selectedTest | capitalize }} Test
+    </p>
+    <p class="subtitle">
+      Hero subtitle
+    </p>
+  </div>
+</div>

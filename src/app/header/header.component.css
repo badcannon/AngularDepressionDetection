@@ -1,0 +1,22 @@
+.navbar-item, .navbar-link{
+  color: whitesmoke;
+}
+
+.navbar-dropdown{
+
+  background-color: transparent;
+
+}
+
+.navbar-item:hover,.navbar-link:hover{
+  background-color: transparent;
+}
+
+.navbar{
+  background-color: transparent;
+}
+
+.button {
+  color: white;
+  background-color: black;
+}

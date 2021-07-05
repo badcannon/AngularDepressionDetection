@@ -1,0 +1,27 @@
+<app-header></app-header>
+<section class="hero is-medium">
+  <div class="hero-body">
+    <p class="title">
+
+      Pick your test and share your results <fa-icon [icon]="faVials" class="mr-1"></fa-icon>
+
+    </p>
+    <p class="subtitle">
+      Between the audio and the social media tests pick one and know if you have signs of early stage depression!
+     </p>
+  </div>
+</section>
+<section class="pl-2 pr-2">
+  <div class="columns">
+    <div class="column">
+      <div class="box">
+        <app-test-selection></app-test-selection>
+      </div>
+    </div>
+    <div class="column is-three-fifths">
+       <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
