@@ -12,13 +12,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TestSelectionComponent } from './test-selection/test-selection.component';
 import { TestAudioComponent } from './test-audio/test-audio.component';
 import { TestTwitterComponent } from './test-twitter/test-twitter.component';
- import { TestAudioResultComponent } from './test-audio/test-audio-result/test-audio-result.component';
-import { TestTwitterResultComponent } from './test-twitter/test-twitter-result/test-twitter-result.component';
 import { TestResultsComponent } from './test-results/test-results.component';
 import { CapitalizePipe } from './shared/capitalize.pipe';
 import { DocumentationComponent } from './documentation/documentation.component';
 import { TestTwitterDetailsComponent } from './test-twitter/test-twitter-details/test-twitter-details.component';
 import { TestAudioDetailsComponent } from './test-audio/test-audio-details/test-audio-details.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { HttpClientModule } from '@angular/common/http';
+import * as fromApp from './store/app.reducer';
 
 @NgModule({
   declarations: [
@@ -30,20 +33,22 @@ import { TestAudioDetailsComponent } from './test-audio/test-audio-details/test-
     TestSelectionComponent,
     TestAudioComponent,
     TestTwitterComponent,
-     TestAudioResultComponent,
-    TestTwitterResultComponent,
     TestResultsComponent,
     CapitalizePipe,
     DocumentationComponent,
     TestTwitterDetailsComponent,
     TestAudioDetailsComponent,
-
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgParticlesModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    StoreModule.forRoot(fromApp.reducers)
   ],
   providers: [],
   bootstrap: [AppComponent]

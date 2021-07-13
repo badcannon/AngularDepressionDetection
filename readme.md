@@ -8,3 +8,5 @@ ALL right listen up this is whatch you gotta do :
 6> store for results (Ngrx)
 7> About us 
 8> ng record
+9>use pdf words in docs
+10>

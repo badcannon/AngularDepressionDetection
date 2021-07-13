@@ -1,1 +1,36 @@
-<p>test-twitter-details works!</p>
+<div class="box">
+  <div class="content">
+    <h1>Twitter handle detection</h1>
+    <p>Twitter handle detection is the process of accessing live tweets from the user. The social media platform to be used is <strong> Twitter </strong>.
+      Depression is a medical illness that affects an individual negatively by changing the way one feels, think and act, but luckily, it's treatable. So, the problem is its detection which we can solve with the help of machine learning.
+      <strong>Textual interactions </strong>  of an individual in the form of tweets,
+      status updates and posts also hold data with respect to the mental state of an individual.</p>
+    <h2>How it Works</h2>
+
+    <ul>
+       <li>Text pre-processing: Text features are extracted and pre-processed.</li>
+       <li>Scraping: Live tweets data using tweepy undergoes scraping phase where scraping of text data is processed.</li>
+       <li>Twitter handle input: Live tweets are analysed in the scraping phase and the generated input data is fed into the system to handle the live twitter data.</li>
+       <li>Creation of a model:	The model is created using five machine learning algorithms namely, SVM (Support Vector Machine), Decision Tree, Naïve Bayes, KNN (K-Nearest Neighbors) and Random Forest to handle the text data and hence trained which yields the result as either depressed or not.</li>
+    </ul>
+    <p>Refer <strong><a routerLink="/docs">Docs</a></strong> for more info</p>
+    <div>
+
+        <form (ngSubmit)="onSubmit(form)" #form=ngForm>
+          <div class="field has-addons">
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="Twitter Handle" name="tw_username" ngModel>
+              <span class="icon is-small is-left">
+                  <fa-icon [icon]="faUserAlt"></fa-icon>
+              </span>
+            </p>
+            <div class="control">
+              <button class="button is-info" type="submit">
+                Process
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+  </div>

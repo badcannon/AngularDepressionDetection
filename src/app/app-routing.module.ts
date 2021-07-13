@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from './about-us/about-us.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 import { HomeComponent } from './home/home.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { TestAudioDetailsComponent } from './test-audio/test-audio-details/test-audio-details.component';
 
-import { TestAudioComponent } from './test-audio/test-audio.component';
 import { TestResultsComponent } from './test-results/test-results.component';
+import { TestTwitterDetailsComponent } from './test-twitter/test-twitter-details/test-twitter-details.component';
 
-import { TestTwitterComponent } from './test-twitter/test-twitter.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"landing",pathMatch:"full"},
@@ -16,12 +17,11 @@ const routes: Routes = [
     {
       path:"results/:test",component:TestResultsComponent
     },
-    {path:"audio/details",component:TestAudioComponent,children:[
-     ]},
-    {path:"twitter/details",component:TestTwitterComponent,children:[
-    ]}
+    {path:"audio/details",component:TestAudioDetailsComponent},
+    {path:"twitter/details",component:TestTwitterDetailsComponent}
   ]},
-  {path:"docs",component:DocumentationComponent}
+  {path:"docs",component:DocumentationComponent},
+  {path:"about-us",component:AboutUsComponent}
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faFileUpload } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-test-audio-details',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class TestAudioDetailsComponent implements OnInit {
 
   constructor() { }
-
+  faFileUpload = faFileUpload;
   ngOnInit(): void {
   }
 

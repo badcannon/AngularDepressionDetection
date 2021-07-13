@@ -14,13 +14,5 @@
     </li>
   </ul>
 </div>
-<div class="hero">
-  <div class="hero-body is-fullheight">
-    <p class="title">
-      {{selectedTest | capitalize }} Test
-    </p>
-    <p class="subtitle">
-      Hero subtitle
-    </p>
-  </div>
-</div>
+<app-test-audio *ngIf="selectedTest=='audio'"></app-test-audio>
+<app-test-twitter *ngIf="selectedTest=='twitter'"></app-test-twitter>

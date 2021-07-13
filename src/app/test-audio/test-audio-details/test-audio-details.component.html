@@ -1,1 +1,52 @@
-<p>test-audio-details works!</p>
+<div class="box">
+<div class="content">
+  <h1>Audio Detection</h1>
+  <p>
+    Audio detection is the process of detecting the depression from acoustic features in the form of <strong>speech</strong>.
+    This tool is aimed at lowering the barrier of entry in seeking help for potential mental illness and supporting medical professional’s diagnoses.
+     Depression recognition through the use of <strong>audio features</strong> utilizing the CNN (Convolutional Neural Network) model.
+    Verbal reactions of the individual coded as audio features hold the data with respect to the conduct of the individual.
+  </p>
+  <h2>How it Works</h2>
+
+  <ul>
+    <li>Audio Splitting: As the features of audio segments of the participants are useful for classification, the segments are split by silence removal.</li>
+    <li>Data Imbalance: In the data-set, the number of non-depressed subjects is about four times larger than that of depressed ones, which can introduce a classification “non-depressed” bias. To rectify this imbalance, audio segments are randomly sampled in equal numbers.</li>
+    <li>Spectrogram Conversion: The sampled audio segments are then converted to spectrogram images.</li>
+    <li>Image Preprocessing: These images are converted to TensorFlow tensor using flow from directory of image processing data generator method. The image tensor is normalized and fed into the CNN model.</li>
+    <li>Training of Convolutional Neural Network: The Model will be trained with a huge number of spectrogram images until the validation accuracy is saturated.</li>
+  </ul>
+  <div>
+   <form>
+    <div class="field has-addons">
+
+    <div class="buttons has-addons">
+      <button class="button is-success">Record</button>
+      <button class="button  is-danger">Stop</button>
+      <button class="button is-warning">Cancle</button>
+    </div>
+    <span class="mr-6 ml-6"> or </span>
+    <div class="file is-right is-info">
+      <label class="file-label">
+        <input class="file-input" type="file" name="resume">
+        <span class="file-cta">
+          <span class="file-icon">
+            <fa-icon [icon] ="faFileUpload"></fa-icon>
+          </span>
+          <span class="file-label">
+           Upload File
+          </span>
+        </span>
+        <span class="file-name">
+          File name
+         </span>
+      </label>
+    </div>
+    </div>
+    <div class="field">
+      <button class="button is-link">Process</button>
+    </div>
+   </form>
+</div>
+
+</div>
