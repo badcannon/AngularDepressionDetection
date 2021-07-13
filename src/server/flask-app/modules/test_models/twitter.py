@@ -22,9 +22,9 @@ class twitter:
     self.processData()
 
   def processData(self):
-        decision_tree_model_pkl = open("model/twitter_data/decision_tree_classifier_20210713.pkl", 'rb')
+        decision_tree_model_pkl = open("model/twitter/decision_tree_classifier_20210713.pkl", 'rb')
         dtree = pickle.load(decision_tree_model_pkl)
-        vectorizer_model_pkl = open('model/twitter_data/vectorizer_model.pkl', 'rb')
+        vectorizer_model_pkl = open('model/twitter/vectorizer_model.pkl', 'rb')
         vectorizer = pickle.load(vectorizer_model_pkl)
 
         inputdtree= vectorizer.transform(self.tweets)
